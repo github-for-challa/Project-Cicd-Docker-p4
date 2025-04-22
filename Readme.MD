@@ -87,6 +87,7 @@ services:
     image: challa1/myapp1:latest
     ports:
       - "3000:3000"
+
 4. Use Local VM for Deployment
 After pushing the image to Docker Hub, use a local VM to pull the image and run it. Make sure Docker is installed on your local VM.
 
