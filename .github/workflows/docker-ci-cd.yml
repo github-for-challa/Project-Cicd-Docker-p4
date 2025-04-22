@@ -26,4 +26,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/my-local-cicd-app:latest
+        tags: challa1/myapp1:latest
