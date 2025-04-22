@@ -35,6 +35,7 @@ This project sets up a full CI/CD pipeline that builds a Docker image, runs test
 
    # Run the app
    CMD ["node", "app.js"]
+
 2. Configure GitHub Actions
 Configure GitHub Actions to automate:
 Checkout code from GitHub
@@ -75,6 +76,7 @@ jobs:
           context: .
           push: true
           tags: challa1/myapp1:latest
+
 3. Write the Docker Compose File (optional)
 If you're using Docker Compose for multi-container setups, include a docker-compose.yml file. Here is a basic version:
 yaml
@@ -89,7 +91,6 @@ services:
 After pushing the image to Docker Hub, use a local VM to pull the image and run it. Make sure Docker is installed on your local VM.
 
 To pull and run the image:
-
 docker pull challa1/myapp1:latest
 docker run -p 3000:3000 challa1/myapp1:latest
 Once the app is running, you can access it at http://<local_vm_ip>:3000/ in your browser, and it will display the message that the CI/CD pipeline is working.
